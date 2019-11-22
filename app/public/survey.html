@@ -6,25 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
+            <div class="row justify-content-sm-center">
+                <div class="col-sm-auto">
           <h1 class="display-4">Tell us about you!</h1>
         </div>
+        </div>
       </div>
-          <h3><strong>About You</strong></h3>
-          <h4>Name (Required)</h4>
-          <input type="text" id="name" class="form-control" required>
-      
-          <h4>Link to Photo Image (Required)</h4>
-          <input type="text" id="photo" class="form-control" required>
-        </ul>
       </div>
+      <div class="container">
+          <div class="row justify-content-sm-center">
+              <div class="col-sm-auto">
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Photo</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+          </div>
+          </div>
+        </div>
+          <div class="container">
+              <div class="row justify-content-md-center">
+                <div class="col-md-auto">
       <h3><strong>Question 1</strong></h3>
-      <h4></h4>
+      <h4>My Hobbies are:</h4>
       <select class="chosen-select" id="q1">
-        <option value="">My Hobbies are:</option>
+        <option value="">Choose</option>
         <option value="1">Adventuring</option>
         <option value="2">Knitting</option>
         <option value="3">Scamming</option>
@@ -33,7 +50,7 @@
       </select>
       <h3><strong>Question 2</strong></h3>
       <h4>Solving mysteries is what gets me up in the morning.</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q2">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -43,7 +60,7 @@
       </select>
       <h3><strong>Question 3</strong></h3>
       <h4>Money</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q3">
         <option value=""></option>
         <option value="1">Uhm what?</option>
         <option value="2">No thanks I'm good</option>
@@ -53,7 +70,7 @@
       </select>
       <h3><strong>Question 4</strong></h3>
       <h4>Have you ever commited a crime?</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q4">
         <option value=""></option>
         <option value="1">Maybe tresspassed a few times</option>
         <option value="2">If being cute is a crime, then im guilty!</option>
@@ -63,7 +80,7 @@
       </select>
       <h3><strong>Question 5</strong></h3>
       <h4>You find a rare monster in the woods, what do you do?</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q5">
         <option value=""></option>
         <option value="1">Study it</option>
         <option value="2">Make it a sweater and be friends with it</option>
@@ -73,7 +90,7 @@
       </select>
       <h3><strong>Question 6</strong></h3>
       <h4>I would rather be...</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q6">
         <option value=""></option>
         <option value="1">Solving Mysteries</option>
         <option value="2">Makeing Arts and Crafts</option>
@@ -83,7 +100,7 @@
       </select>
       <h3><strong>Question 7</strong></h3>
       <h4>You just broke something a friend built you</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q7">
         <option value=""></option>
         <option value="1">Come clean, be honest</option>
         <option value="2">Make an apologie card with extra glitter</option>
@@ -93,7 +110,7 @@
       </select>
       <h3><strong>Question 8</strong></h3>
       <h4>I want to be _____ in the future</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q8">
         <option value=""></option>
         <option value="1">An Explorer</option>
         <option value="2">A Unicorn</option>
@@ -103,7 +120,7 @@
       </select>
       <h3><strong>Question 9</strong></h3>
       <h4>My Strenghts are:</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q9">
         <option value=""></option>
         <option value="1">My Brains</option>
         <option value="2">My Cuteness and Charisma</option>
@@ -113,7 +130,7 @@
       </select>
       <h3><strong>Question 10</strong></h3>
       <h4>If you could have anything, what would it be</h4>
-      <select class="chosen-select" id="q1">
+      <select class="chosen-select" id="q10">
         <option value=""></option>
         <option value="1">A book</option>
         <option value="2">GRAPPELING HOOK</option>
@@ -121,7 +138,69 @@
         <option value="4">Oh dude im happy as is</option>
         <option value="5">An apple core</option>
       </select>
-      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-        Submit</button>
+    <button type="submit" class="btn btn-primary btn-lg" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+    </div>
+  </div>
+  </div>
+<!-- submit button -->
+
+<!-- POSTS Info to server -->
+<script type="text/javascript">
+var friendLevel = [];
+    $("#submit").on("click", function (event) {
+        console.log("Clicked")
+        event.preventDefault();
+        var newPal = {
+            name: $("#name").val().trim(),
+                    };
+           var q1 = $("#q1").val();
+           var q2 = $("#q2").val();
+           var q3 = $("#q3").val();
+           var q4 = $("#q4").val();
+           var q5 = $("#q5").val();
+           var q6 = $("#q6").val();
+           var q7 = $("#q7").val();
+           var q8 = $("#q8").val();
+           var q9 = $("#q9").val();
+           var q10 = $("#q10").val();
+          friendLevel.push(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10);
+        console.log(friendLevel)
+        $.post("/api/friends", newPal)
+            .then(function (data) {
+                console.log("Added data ");
+                console.log(data);
+            });
+        $.post("/api/friends", friendLevel)
+            .then(function (data) {
+                console.log("Added data ");
+                console.log(data);
+            });
+        $("#form")[0].reset();
+    });
+</script>
+
+
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
